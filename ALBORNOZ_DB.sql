@@ -187,5 +187,8 @@ CREATE TABLE DetalleVentas(
 		iva float null
 )
 GO
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9c14fa35d66a16579cdc572a00dd8a08edb03e71
 
