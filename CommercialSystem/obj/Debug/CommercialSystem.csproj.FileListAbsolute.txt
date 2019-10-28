@@ -148,7 +148,6 @@ C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\bin\M
 C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\bin\es\System.Web.Optimization.resources.dll
 C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.csprojAssemblyReference.cache
-C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.csproj.CoreCompileInputs.cache
 C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.csproj.CopyComplete
 C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.dll
 C:\Users\Maga.PC-376\source\repos\MBAlbornoz\TPC_Albornoz\CommercialSystem\obj\Debug\CommercialSystem.pdb

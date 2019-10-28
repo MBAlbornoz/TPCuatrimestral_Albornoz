@@ -65,7 +65,7 @@
 
 
     <div class="container body-content">
-        <a href="#" class="menuABM" title="Nuevo"><img src="Imagenes/new-file_40454.png"><div>Nuevo</div></a> 
+        <a href="FormCliente.aspx" class="menuABM" title="Nuevo"><img src="Imagenes/new-file_40454.png"><div>Nuevo</div></a> 
         <a href="#" class="menuABM" title="Editar"><img src="Imagenes/Edit.png"><div>Editar</div></a>
         <a href="#" class="menuABM" title="Eliminar"><img src="Imagenes/Delete.png"><div>Eliminar</div></a>
         <a href="MenuPrincipal.aspx" class="menuABM" title="Cancelar"><img src="Imagenes/Cancel.png"><div>Cancelar</div></a> 
@@ -73,21 +73,8 @@
     <div></div>
     <asp:TextBox runat="server" AutoPostBack="true" BorderStyle="Solid" BorderColor="#0066ff" Height="30px" Width="457px" CssClass="buscarABM"></asp:TextBox><asp:Button runat="server" BorderStyle="Groove" Width="112px" BorderWidth="2px" Font-Bold="True" Font-Italic="False" Font-Size="Medium" ForeColor="Black" Text="Buscar"/>
 
-    <h1>REGISTRO CLIENTE</h1>
-    <div><img src="Imagenes/User.png" style="border: thin dashed #000080; -moz-border-bottom-colors:cornflowerblue; height: 77px; width: 68px;" class="ImgUser" alt="imgCliente"/>
-        <p class="auto-style1">
-        <label>Nombre </label><asp:TextBox runat="server" Width="256px"></asp:TextBox>
-        <label>Apellido</label><asp:TextBox runat="server" Width="324px"></asp:TextBox>
-        <br />
-        <label>DNI/CUIT</label><asp:TextBox runat="server"></asp:TextBox>
-        <label>Fecha Nacimiento</label><asp:ListBox runat="server" Height="20px" Width="50px" AutoPostBack="true" CausesValidation="true"></asp:ListBox>
-        <asp:ListBox runat="server" Height="20px" Width="50px" AutoPostBack="true" CausesValidation="true"></asp:ListBox>
-        <asp:ListBox runat="server" Height="20px" Width="90px" AutoPostBack="true" CausesValidation="true"></asp:ListBox>
-        <label>Sexo</label><asp:ListBox runat="server" Height="20px" Width="50px" AutoPostBack="true" CausesValidation="true"></asp:ListBox></p>
-    </div>
-    
-  
-    <br />
+
+
 	<h2 style="margin: 0px 10px 30px 80px">Table</h2>		
 	<table>
 		<tr>
