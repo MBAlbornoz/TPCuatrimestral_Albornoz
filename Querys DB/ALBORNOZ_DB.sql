@@ -6,7 +6,41 @@ CREATE DATABASE ALBORNOZ_DB
 GO
 use ALBORNOZ_DB
 GO
-CREATE TABLE Personas
+CREATE TABLE Vendedores
+(
+	id int not null primary key identity(1,1),
+	nombre varchar(50) not null,
+	apellido varchar(50),
+	dni_cuit int not null unique,
+	imagen varchar(500),
+	fNacimiento Date not null,
+	fRegistro Datetime not null,
+	sexo char null,
+	idUsuario int null foreign key references Usuarios(id)
+)
+go
+CREATE TABLE Clientes
+(
+	id int not null primary key identity(1,1),
+	nombre varchar(50) not null,
+	apellido varchar(50),
+	dni_cuit int not null unique,
+	imagen varchar(500),
+	fechaNacimiento Date not null,
+	fechaRegistro Datetime not null
+)
+GO
+CREATE TABLE Empresas
+(
+	id int not null primary key identity(1,1),
+	nombre varchar(50) not null,
+	apellido varchar(50),
+	dni_cuit int not null unique,
+	imagen varchar(500),
+    razonSocial varchar(100) not null unique,
+)
+GO
+CREATE TABLE Proveedores
 (
 	id int not null primary key identity(1,1),
 	nombre varchar(50) not null,
@@ -15,87 +49,26 @@ CREATE TABLE Personas
 	imagen varchar(500),
 )
 GO
-CREATE TABLE Usuarios
-(
-	   id int not null primary key,
-	   nombre varchar(100) not null,
-	   contrasenia varchar(100) not null
-)
-GO
-CREATE TABLE Vendedores(
-	id int not null primary key identity(1,1),
-	idPersona int not null foreign key references Personas(id),
-	fNacimiento Date not null,
-	fRegistro Datetime not null,
-	sexo char null,
-	idUsuario int null foreign key references Usuarios(id)
-)
-
-
-GO
-
-CREATE TABLE Clientes(
-	id int not null primary key identity(1,1),
-	idPersona int not null foreign key references Personas(id),
-	fechaNacimiento Date not null,
-	fechaRegistro Datetime not null
-)
-GO
-
-CREATE TABLE Empresa(
-	id int not null primary key identity(1,1),
-	idPersona int not null foreign key references Personas(id),
-	razonSocial varchar(100) not null unique,
-)
-GO
-CREATE TABLE Proveedores(
-	id int not null primary key identity(1,1),
-	idPersona int not null foreign key references Personas(id)
-)
-GO
 CREATE TABLE Telefonos
 (
-	id int not null foreign key references Personas(id),
+	id int not null primary key identity(1,1),
 	tipo varchar(30) not null,
 	numero int not null,
-	primary key(id,tipo)
 )
 GO
 CREATE TABLE Emails
 (
-	id int not null primary key foreign key references Personas(id),
+	id int not null primary key identity(1,1),
 	email varchar(100) null 
 )
-
-/*
-CREATE TABLE Paises
-(
-	id int not null primary key identity(1,1),
-	nombre varchar(50) not null  unique,
-)
 GO
-CREATE TABLE Provincias
-(
-	id int not null primary key identity(1,1),
-	idPais int null foreign key references Paises(id),
-	nombre varchar(100) not null unique
-)
-CREATE TABLE Ciudades
-(
-	id int not null primary key identity(1,1),
-	idProvincia int null foreign key references Provincias(id),
-	nombre varchar(50) not null
-)
-*/
-        
 CREATE TABLE Marcas(
 	id int not null primary key identity(1,1),
 	nombre varchar(100) not null unique
 )
-
 GO       
 CREATE TABLE Productos(
-	codigo varchar(100) not null primary key,
+	codigo varchar(50) not null primary key,
 	nombre varchar(100) not null,
 	imagen varchar(200) not null,
 	idMarca int not null foreign key references Marcas(id)
@@ -136,7 +109,7 @@ CREATE TABLE  MedioPago(
 
 GO
 CREATE TABLE Compras(
-	codigo int not null primary key identity(1,1),
+	codigo int not null primary key identity(1,1),  --codigo del recibo
 	idTipoFactura int not null foreign key references Tipo_Factura(id),
 	idMedioPago int not null foreign key references MedioPago(id),
 	idEmpresa int not null foreign key references Empresa(id),
@@ -149,15 +122,17 @@ CREATE TABLE Compras(
 
 )
 GO        
-CREATE TABLE DetalleCompras(
+CREATE TABLE DetallesCompras(
+	id int not null,
+	--id int not null identity(1,1),
 	codigo int not null foreign key references Compras(codigo),
 	codigoProducto varchar(100) not null foreign key references Productos(codigo), 
-	codigoFactura int not null,
 	precioU money not null,
 	cantidad int not null check (cantidad>0), 
 	total money not null,
 	subtotal money not null,
-	iva float null
+	iva float null,
+	primary key (id,codigo)
 )
 GO
 CREATE TABLE Facturacion(
@@ -175,20 +150,16 @@ CREATE TABLE Facturacion(
 	CHECK(total>0)
 )
 GO
-CREATE TABLE DetalleVentas(
+CREATE TABLE DetalleFacturacion(
+		id int not null,
 		codigo int not null foreign key references Facturacion(codigo),
-		idCodigoFactura int not null,
 		idProducto varchar(100) not null foreign key references Productos(codigo),
 		codigoFactura int not null,
 		precioU money not null,
 		cantidad int not null, --CREAR CHECK MAYOR CERO
 		total money not null,
 		subtotal money not null,
-		iva float null
+		iva float null,
+		primary key(id,codigo)
 )
 GO
-<<<<<<< HEAD
-
-=======
->>>>>>> 9c14fa35d66a16579cdc572a00dd8a08edb03e71
-
