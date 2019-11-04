@@ -79,7 +79,7 @@
          </li>
         <li><a href="#">Facturacion</a>
             <ul class="submenu">
-                <li><a href="#" class="">Ingresar Factura</a></li>
+                <li><a href="Facturacion.aspx" class="">Ingresar Factura</a></li>
                 <li><a href="#" class="">Ultima Factura</a></li>
             </ul>
         </li>
@@ -112,6 +112,4 @@
             </form></div>
 </nav>
         ---%>
-
-
 </asp:Content>

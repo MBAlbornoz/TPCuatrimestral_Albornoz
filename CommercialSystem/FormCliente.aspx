@@ -69,11 +69,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Guardar"/>
+                            <%--<input type="submit" name="submit" id="submit" class="form-submit" value="Guardar"/>---%>
+                            <asp:Button ID="BtnGuardar" runat="server" Text="Guardar" OnClick="BtnGuardar_Click" class="form-submit"/>
+                           
                         </div>
                          <div class="form-group">
-                            <input type="submit" name="submit" id="cancel" class="form-submit" value="Cancelar"/>
-                        </div>
+                             <%--<input type="submit" name="submit" id="cancel" class="form-submit" value="Cancelar" onclick="window.location.href ='MenuPrincipal.aspx'"/>--%>
+                             <%---<asp:Button ID="BtnCancelar" runat="server" Text="Otro" OnClick="BtnCancelar_Click" />---%>
+                             <input type="button" value="Cancelar" class="form-submit" onclick="window.location.href = 'PageCliente.aspx'" />
+                         </div>
                     </form>
                 </div>
             </div>

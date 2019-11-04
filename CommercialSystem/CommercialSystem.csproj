@@ -124,6 +124,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Facturacion.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FormCliente.aspx" />
@@ -140,6 +141,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Imagenes\AddUser.png" />
     <Content Include="Imagenes\Cancel.png" />
+    <Content Include="Imagenes\commerce.png" />
     <Content Include="Imagenes\Delete.png" />
     <Content Include="Imagenes\Edit.png" />
     <Content Include="Imagenes\new-file_40454.png" />
@@ -211,6 +213,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion.aspx.cs">
+      <DependentUpon>Facturacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facturacion.aspx.designer.cs">
+      <DependentUpon>Facturacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="FormCliente.aspx.cs">
       <DependentUpon>FormCliente.aspx</DependentUpon>

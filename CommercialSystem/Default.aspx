@@ -5,28 +5,32 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
     form{
-    margin: 0 auto;
     text-align: center;
-    border-radius: 10px;
-    border: 1px solid #666666;
+    margin-bottom:auto;
     width: 800px;
+    }
+    label{
+        text-align:center;
     }
     body{
         background: antiquewhite;
     }
+ 
     </style>
-
-  <form>
+    <h1>Registro Usuario <span class="badge badge-secondary"></span></h1>
+    <br />
+    <br />
+ <form class="form">
   <div class="form-group row">
-    <label for="inputUser" class="col-sm-2 col-form-label">Usuario</label>
+    <p>Password</p>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Usuario">
+      <input type="text" style="width:500px" class="form-control" id="inputUser" placeholder="Usuario">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+    <p>Usuaio</p>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+      <input type="password" style="width:500px" class="form-control" id="inputPassword3" placeholder="Contraseña">
     </div>
   </div>
     <div class="form-group row">

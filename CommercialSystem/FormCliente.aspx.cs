@@ -13,5 +13,15 @@ namespace CommercialSystem
         {
 
         }
+
+        protected void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FormCliente.aspx");
+        }
+
+        protected void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PageCliente.aspx");
+        }
     }
 }
