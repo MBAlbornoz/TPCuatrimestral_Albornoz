@@ -7,6 +7,6 @@ namespace Dominio
     public class Email
     {
         public int Id { get; set; }
-        public string Descripcion { get; set; }
+        public string DireccionEmail { get; set; }
     }
 }

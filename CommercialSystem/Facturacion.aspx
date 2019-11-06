@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Facturacion.aspx.cs" Inherits="CommercialSystem.Facturacion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 <style>@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
   body, h1, h2, h3, h4, h5, h6{
     font-family: 'Bree Serif', serif;
@@ -91,6 +93,14 @@ Total:
  Nombre 
  Número de cuenta: 12345678
  IVA: ------</div>
+
+
+<br /><br />
 </div>
+    <div class="col-sm-12 col-xs-12" style="text-align:center">
+        <asp:Button runat="server" ID="BtnAplicar" OnClick="BtnAplicar_Click" CssClass="btn btn-primary btn-lg active" Text="Aplicar"/>
+          <asp:Button runat="server" ID="BtnCancelar" OnClick="BtnCancelar_Click" CssClass="btn btn-primary btn-lg active" Text="Cancelar"/>
+    </div>
+ 
 
 </asp:Content>

@@ -13,5 +13,15 @@ namespace CommercialSystem
         {
 
         }
+
+        protected void BtnAplicar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Facturacion.aspx");
+        }
+
+        protected void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MenuPrincipal.aspx");
+        }
     }
 }
